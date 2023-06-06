@@ -8,8 +8,9 @@ else
     size = ARGV[0].to_i
 end
 
-if size <=0
-    abort "Size can't be equal or less than 0"
+if size < 2
+    abort "Size can't be less than 2"
+    # Size == 1 is a point, not a triangle
 end
 
 puts 'With empty spaces'
